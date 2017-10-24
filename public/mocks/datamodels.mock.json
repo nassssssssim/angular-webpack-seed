@@ -1,0 +1,278 @@
+[
+  {
+    "id": "59e47e3032f19912e08c6b56",
+    "schema": {
+      "name": "HOSPITAL",
+      "entities": [
+        {
+          "id": "59e47e3032f19912e08c6b55",
+          "name": "HOSPITAL",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "name",
+              "index": 1,
+              "dataType": {
+                "name": "VARCHAR",
+                "type": "String",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "address",
+              "index": 2,
+              "dataType": {
+                "name": "VARCHAR",
+                "type": "String",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "ROOM",
+              "index": 4,
+              "dataType": {
+                "name": "ROOM",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": true
+            },
+            {
+              "name": "ambulance_count",
+              "index": 3,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59e47e3032f19912e08c6b56"
+        },
+        {
+          "id": "59e48e8f32f199143cfcc144",
+          "name": "ROOM",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "number",
+              "index": 1,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "bed_count",
+              "index": 2,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "PATIENT",
+              "index": 4,
+              "dataType": {
+                "name": "PATIENT",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": true
+            },
+            {
+              "name": "HOSPITAL",
+              "index": 3,
+              "dataType": {
+                "name": "HOSPITAL",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59e47e3032f19912e08c6b56"
+        },
+        {
+          "id": "59e48e8f32f199143cfcc145",
+          "name": "PATIENT",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "name",
+              "index": 1,
+              "dataType": {
+                "name": "VARCHAR",
+                "type": "String",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "age",
+              "index": 2,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "room",
+              "index": 3,
+              "dataType": {
+                "name": "ROOM",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59e47e3032f19912e08c6b56"
+        }
+      ],
+      "relationships": [
+        {
+          "name": null,
+          "primaryEntityName": "ROOM",
+          "foreignEntityName": "HOSPITAL",
+          "primaryToForeignFieldNameMap": {
+            "HOSPITAL": "ROOM"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "PATIENT",
+          "foreignEntityName": "ROOM",
+          "primaryToForeignFieldNameMap": {
+            "room": "PATIENT"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "HOSPITAL",
+          "foreignEntityName": "ROOM",
+          "primaryToForeignFieldNameMap": {
+            "ROOM": "HOSPITAL"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "ROOM",
+          "foreignEntityName": "PATIENT",
+          "primaryToForeignFieldNameMap": {
+            "PATIENT": "room"
+          }
+        }
+      ]
+    },
+    "tenantId": "59acfb51084fab0901490fe3",
+    "name": "HOSPITAL",
+    "jdbcDataSourceInfoId": "59cb530532f1991f9802ee04",
+    "physicalDataModelInfo": {
+      "tablesPrefix": "HOSPITAL_"
+    },
+    "persistable": true,
+    "importTransactionId": null
+  }
+]
