@@ -1,3 +1,26 @@
+- preferably use `node 6.x`, other versions may work too
+- you're gonna need `yarn`, install : `npm install yarn -g`
+- install dependencies : `yarn install`
+- start dev server: `yarn run dev` then open `http://localhost:2992/`
+- for development build: `yarn run build-dev`
+- when you feel you're done, test it on production build, to check if everything is ok: `yarn run build`
+
+### Directory layout
+
+    ├── build              # build stats
+    ├── public             # public folder (webroot for dev server)
+    │   ├── _assets        # build results - assets packed by webpack
+    │   └── index.html     # one of app entry points, for dev server
+    └── src                # app sources
+        ├── demo           # one of app modules
+        ├── index.js       # app entry module
+        ├── index.scss     # 
+        └── index.test.js  # entry point for test karma
+
+
+
+
+
 # Modern app seed for legacy Angular apps (1.x) 
 
 [![Build Status](https://travis-ci.org/zxbodya/angular-webpack-seed.svg?branch=master)](https://travis-ci.org/zxbodya/angular-webpack-seed)
