@@ -1,13 +1,14 @@
 {
   "presets": [
     [
-      "es2015",
+      "env",
       {
         "modules": false
       }
     ]
   ],
   "plugins": [
+    "transform-class-properties",
     "transform-runtime",
     "angularjs-annotate"
   ]
