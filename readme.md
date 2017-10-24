@@ -1,3 +1,5 @@
+### Guide
+
 - preferably use `node 6.x`, other versions may work too
 - you're gonna need `yarn`, install : `npm install yarn -g`
 - install dependencies : `yarn install`
@@ -10,52 +12,21 @@
     ├── build              # build stats
     ├── public             # public folder (webroot for dev server)
     │   ├── _assets        # build results - assets packed by webpack
+    │   ├── mocks          # mock datamodels, records, etc.
     │   └── index.html     # one of app entry points, for dev server
     └── src                # app sources
         ├── demo           # one of app modules
-        ├── index.js       # app entry module
-        ├── index.scss     # 
-        └── index.test.js  # entry point for test karma
+        ├── services       # services you should use live here
+        │   └── datamodel  # have a look to see what services you have available
+        ├── index.js       # app entry moduleya
+        └── index.scss     # some styling
 
 
 
 
 
-# Modern app seed for legacy Angular apps (1.x) 
 
-[![Build Status](https://travis-ci.org/zxbodya/angular-webpack-seed.svg?branch=master)](https://travis-ci.org/zxbodya/angular-webpack-seed)
-[![Coverage Status](https://coveralls.io/repos/zxbodya/angular-webpack-seed/badge.svg?branch=master&service=github)](https://coveralls.io/github/zxbodya/angular-webpack-seed?branch=master)
-[![codecov.io](https://codecov.io/github/zxbodya/angular-webpack-seed/coverage.svg?branch=master)](https://codecov.io/github/zxbodya/angular-webpack-seed?branch=master)
-
-It is quite opinionated, so feel free - to make suggestions to improve it.
-
-Includes following:
-
- - [Webpack](https://webpack.js.org/) (modules, assets bundling)
- - [babel](http://babeljs.io/) (ES2015 support)
- - [babel-plugin-angularjs-annotate](https://github.com/schmod/babel-plugin-angularjs-annotate)
- - karma test runner configuration with code coverage reports
- - [node-sass](https://github.com/sass/node-sass) for styles + AutoPrefixer 
-
-
-Requirements:
- 
-- NodeJS 6+ is required.
-- [Yarn](https://yarnpkg.com) is optional to use, but I recommend using it. (if no - npm is ok).  
-
-### Usage
-
-1. Install dependencies `yarn i`
-2. Start dev server `yarn yarn dev` open [http://localhost:2992](http://localhost:2992)
-3. Lint your code `yarn run lint`
-4. Run unit tests `yarn run test`
-5. Create build for deployment `yarn run build` for production build, or `yarn run build-dev` for development build
-
-To analyze your bundle size - I recommend using [Webpack Bundle Analyzer](https://github.com/th0r/webpack-bundle-analyzer)
-
----
-
-## Getting started
+## Useful Links
 
 [Angular Guide](https://docs.angularjs.org/guide)
 
@@ -69,20 +40,6 @@ Read [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) - it 
 At least briefly read [webpack documentation](http://webpack.github.io/docs/) it is crucial to understand how it works in general. 
 
 ---
-
-## Usage advice 
-
-### Directory layout
-
-    ├── build              # build stats
-    ├── public             # public folder (webroot for dev server)
-    │   ├── _assets        # build results - assets packed by webpack
-    │   └── index.html     # one of app entry points, for dev server
-    └── src                # app sources
-        ├── demo           # one of app modules
-        ├── index.js       # app entry module
-        ├── index.scss     # 
-        └── index.test.js  # entry point for test karma
 
 ### Styleguide
 
@@ -102,10 +59,9 @@ Application organisation rules:
     - module can have nested modules
     - module can require other modules which are direct siblings of it or parent modules, or modules nested in it (if you need to require module that is nested in "sibling" - you you should move it up by hierarchy before requiring it)
 2. Keep modules small - if module is too big, maybe it should be few modules 
-3. Every file should have only one entity inside it, for example if there is directive which has controller and template - there should be three files, plus likely two for unit tests   
+3. Every file should have only one entity inside it, for example if there is directive which has controller and template - there should be three files   
 4. Group related resources by folders
 5. Name files with suffixes `Directive`, `Controller`, `Factory`, `Service`, `Provider`
-6. Use `.test` suffix for test file names
 
 ### Directives
 
