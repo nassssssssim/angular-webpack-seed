@@ -29,7 +29,10 @@ function statesConfig($stateProvider) {
     })
     .state('stateTest', {
       url: '/test',
-      template: `<h1>You are in another state</h1><md-button class="md-accent md-raised" ui-sref="main">GO BACK</md-button>`
+      template: `<md-content layout="column" layout-align="center center">
+<h1>You are in another state</h1>
+<md-button class="md-raised md-accent" ui-sref="main">GO BACK</md-button>
+</md-content>`
     })
 }
 
