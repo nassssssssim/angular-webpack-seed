@@ -1,11 +1,12 @@
-<div class="welcome">
+<md-content class="welcome" layout="column" layout-align="space-between center" md-colors="{background:'green-300'}"
+            layout-padding>
   <img src="img/angularjs-logo.png" width="300"/>
 
   <h2>Demo page for Hasin-co ...</h2>
 
   <h3>Following tools are used:</h3>
 
-  <div class="welcome-list">
+  <div class="welcome-list" flex>
     <div
       class="welcome-list-item"
       ng-repeat="item in welcome.items">
@@ -15,6 +16,8 @@
 
     </div>
   </div>
-  <hr>
+
+  <md-button class="md-primary" ui-sref="stateTest">STATE TEST</md-button>
+
   <img class="bizotop-logo" src="img/bizotop-logo-en.png" width="200"/><br>
-</div>
+</md-content>
