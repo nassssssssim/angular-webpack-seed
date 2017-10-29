@@ -10,12 +10,13 @@ function dataModelsServiceFactory($http) {
   };
 
   function getAllDataModels() {
-    return $http.get('/mocks/datamodels.mock.json');
+    return $http.get('/mocks/datamodels.mock.json').then(response => response.data);
   }
 
   // pageNumber starts at 0 (default)
   function getRecordsOf(entityName, pageNumber) {
-    return $http.get(`/mocks/${entityName.toLowerCase()}-${pageNumber || 0}-records.mock.json`);
+    let url = `/mocks/${entityName.toLowerCase()}-${pageNumber || 0}-records.mock.json`;
+    return $http.get(url).then(response => response.data);
   }
 
   function getEntity(entityName) {
@@ -37,5 +38,5 @@ function dataModelsServiceFactory($http) {
   }
 }
 
-
 export {dataModelsServiceFactory}
+export default dataModelsServiceFactory;

@@ -11,13 +11,13 @@ import 'angular/angular-csp.css';
 import './index.scss';
 
 import demoModule from './demo/demoModule';
-import serviceModule from './services/datamodel/datamodels-service.module';
+import datamodelsModule from "./datamodels/datamodels.module";
 
 angular.module('main', [
   'ngMaterial',
   'ui.router',
   demoModule,
-  serviceModule
+  datamodelsModule
 ])
   .config(statesConfig);
 
@@ -27,12 +27,9 @@ function statesConfig($stateProvider, $urlRouterProvider) {
       url: '/',
       template: '<demo-welcome></demo-welcome>'
     })
-    .state('stateTest', {
-      url: '/test',
-      template: `<md-content layout="column" layout-align="center center">
-<h1>You are in another state</h1>
-<md-button class="md-raised md-accent" ui-sref="main">GO BACK</md-button>
-</md-content>`
+    .state('datamodels', {
+      url: '/datamodels',
+      template: `<demo-datamodels></demo-datamodels>`
     });
 
   $urlRouterProvider.otherwise('/');
