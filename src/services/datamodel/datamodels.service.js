@@ -15,7 +15,7 @@ function dataModelsServiceFactory($http) {
 
   // pageNumber starts at 0 (default)
   function getRecordsOf(entityName, pageNumber) {
-    return $http.get(`/mocks/${entityName.toLowerCase()}-${pageNumber ? (pageNumber + '-') : ''}records.mock.json`);
+    return $http.get(`/mocks/${entityName.toLowerCase()}-${pageNumber || 0}-records.mock.json`);
   }
 
   function getEntity(entityName) {
