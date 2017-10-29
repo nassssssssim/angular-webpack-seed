@@ -21,7 +21,7 @@ angular.module('main', [
 ])
   .config(statesConfig);
 
-function statesConfig($stateProvider) {
+function statesConfig($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('main', {
       url: '/',
@@ -33,7 +33,9 @@ function statesConfig($stateProvider) {
 <h1>You are in another state</h1>
 <md-button class="md-raised md-accent" ui-sref="main">GO BACK</md-button>
 </md-content>`
-    })
+    });
+
+  $urlRouterProvider.otherwise('/');
 }
 
 angular.bootstrap(document.documentElement, ['main']);
