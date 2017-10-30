@@ -1,11 +1,11 @@
 export default function configRoutes($stateProvider) {
   $stateProvider.state('datamodels.browse', {
-    url: '/:name/browse',
+    url: '/:name/browse?page',
     resolve: {
-      datamodel: function(dataModelsService, $stateParams){
-        return dataModelsService.getRecordsOf($stateParams.name);
+      records: function(dataModelsService, $stateParams){
+        return dataModelsService.getRecordsOf($stateParams.name, $stateParams.page);
       }
     },
-    template: '<demo-datamodel-browser records-page="$resolve.datamodel"></demo-datamodel-browser>'
+    template: '<demo-datamodel-browser records-page="$resolve.records"></demo-datamodel-browser>'
   });
 };

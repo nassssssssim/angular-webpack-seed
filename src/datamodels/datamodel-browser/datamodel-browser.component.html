@@ -1,3 +1,14 @@
 <p>
   showing {{$ctrl.recordsPage.number}} of {{$ctrl.recordsPage.totalElements}}
 </p>
+current page: {{$ctrl.recordsPage.number}}
+<demo-paginator data-total-pages="$ctrl.recordsPage.totalPages"
+                data-current-page-change="$ctrl.pageChanged(page)"
+                data-current-page="$ctrl.recordsPage.number"></demo-paginator>
+<hr />
+<div class="md-padding md-whiteframe-1dp" style="width: 400px; margin: 50px; display: inline-block"
+     ng-repeat="record in $ctrl.recordsPage.content">
+  <div ng-repeat="(key, value) in record">
+    {{key}}: {{value}}
+  </div>
+</div>

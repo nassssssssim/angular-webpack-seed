@@ -13,7 +13,7 @@ import './index.scss';
 import demoModule from './demo/demo.module';
 import datamodelsModule from "./datamodels/datamodels.module";
 
-angular.module('main', [
+angular.module('hasinCourse', [
   'ngMaterial',
   'ui.router',
   demoModule,
@@ -29,11 +29,16 @@ function statesConfig($stateProvider, $urlRouterProvider) {
     })
     .state('datamodels', {
       url: '/datamodels',
-      template: `<demo-datamodels></demo-datamodels>`
+      resolve: {
+        datamodels: function (dataModelsService) {
+          return dataModelsService.getAllDataModels();
+        }
+      },
+      template: `<demo-datamodels datamodels="$resolve.datamodels"></demo-datamodels>`
     });
 
   $urlRouterProvider.otherwise('/');
 }
 
-angular.bootstrap(document.documentElement, ['main']);
+angular.bootstrap(document.documentElement, ['hasinCourse']);
 

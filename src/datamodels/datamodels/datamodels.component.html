@@ -1,12 +1,7 @@
 <md-content layout="row" layout-align="center center">
-  <md-card class="md-padding" ng-repeat="dataModel in $ctrl.datamodels">
-    <h2 class="md-title">{{dataModel.name}}</h2>
-
-    <md-button ng-repeat="entity in dataModel.schema.entities"
-      ui-sref="datamodels.browse({name: entity.name})">
-      {{entity.name}}
-    </md-button>
-  </md-card>
-
+  <demo-datamodel-item ng-repeat="dataModel in $ctrl.datamodels"
+                       data-on-remove="$ctrl.remove(item)"
+                       data-datamodel="dataModel"></demo-datamodel-item>
 </md-content>
+
 <div ui-view></div>

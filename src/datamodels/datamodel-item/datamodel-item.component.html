@@ -1,0 +1,14 @@
+<md-card class="md-padding" >
+  <md-card-title class="md-title">{{$ctrl.datamodel.name}}</md-card-title>
+
+  <md-card-content>
+    <md-button ng-repeat="entity in $ctrl.datamodel.schema.entities"
+               ui-sref="datamodels.browse({name: entity.name})">
+      {{entity.name}}
+    </md-button>
+  </md-card-content>
+  <md-card-actions>
+      <md-button class="md-warn md-raised"
+                 ng-click="$ctrl.onRemove({item: $ctrl.datamodel})">Remove</md-button>
+  </md-card-actions>
+</md-card>
