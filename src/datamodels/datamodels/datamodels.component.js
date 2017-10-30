@@ -1,6 +1,6 @@
-/**
- * Created by User on 10/29/2017.
- */
+
+import './datamodels.component.scss';
+import template from './datamodels.component.html';
 
 class DataModelsComponent {
   constructor(dataModelsService){
@@ -12,6 +12,6 @@ class DataModelsComponent {
 }
 
 export const dataModelsComponent = {
-  template: require('./datamodels.component.html'),
+  template: template,
   controller: DataModelsComponent
 };

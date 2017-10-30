@@ -1,4 +1,7 @@
-export default class WelcomeController {
+import './welcome.component.scss';
+import template from './welcome.component.html';
+
+class WelcomeController {
   constructor() {
     this.items = [
       { title: 'Webpack', image: require('./img/what-is-webpack.png') },
@@ -7,3 +10,8 @@ export default class WelcomeController {
     ];
   }
 }
+
+export default {
+  controller: WelcomeController,
+  template: template,
+};

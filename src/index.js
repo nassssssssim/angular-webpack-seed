@@ -10,7 +10,7 @@ import 'angular-ui-router';
 import 'angular/angular-csp.css';
 import './index.scss';
 
-import demoModule from './demo/demoModule';
+import demoModule from './demo/demo.module';
 import datamodelsModule from "./datamodels/datamodels.module";
 
 angular.module('main', [

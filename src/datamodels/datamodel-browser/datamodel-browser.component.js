@@ -1,9 +1,11 @@
 
+import template from './datamodel-browser.component.html';
+
 class DataModelBrowser{
 
 }
 export const dataModelBrowserComponent = {
-  template: require('./datamodel-browser.component.html'),
+  template: template,
   bindings:{
     recordsPage: '<'
   },
