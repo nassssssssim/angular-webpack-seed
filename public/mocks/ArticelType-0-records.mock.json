@@ -1,0 +1,24 @@
+{
+  "content": [
+    {
+      "Typename": "math",
+      "id": 1
+    },
+    {
+      "Typename": "chemistrt",
+      "id": 2
+    },
+    {
+      "Typename": "computer",
+      "id": 7
+    }
+  ],
+  "last": true,
+  "totalElements": 3,
+  "totalPages": 1,
+  "first": true,
+  "sort": null,
+  "numberOfElements": 3,
+  "size": 10,
+  "number": 0
+}

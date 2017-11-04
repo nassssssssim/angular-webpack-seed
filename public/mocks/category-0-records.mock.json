@@ -1,0 +1,49 @@
+{
+  "content": [
+    {
+      "category_name": "first",
+      "id": 1
+    },
+    {
+      "category_name": "second",
+      "id": 2
+    },
+    {
+      "category_name": "third",
+      "id": 3
+    },
+    {
+      "category_name": "forth",
+      "id": 4
+    },
+    {
+      "category_name": "fifth",
+      "id": 5
+    },
+    {
+      "category_name": "six",
+      "id": 6
+    },
+    {
+      "category_name": "seven",
+      "id": 7
+    },
+    {
+      "category_name": "eight",
+      "id": 8
+    },{
+      "category_name": "nine",
+      "id": 9
+    },{
+      "category_name": "fortheen",
+      "id": 10
+    }],
+  "last": false,
+  "totalPages": 2,
+  "totalElements": 19,
+  "first": true,
+  "sort": null,
+  "numberOfElements": 10,
+  "size": 10,
+  "number": 0
+}

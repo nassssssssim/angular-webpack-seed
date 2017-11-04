@@ -1189,5 +1189,361 @@
       "tablesPrefix": "BootCamp7_"
     },
     "persistable": true
+  },
+  {
+    "id": "59fd5298fb5f3309ecc6eb52",
+    "schema": {
+      "name": "hasinTec2",
+      "entities": [
+        {
+          "id": "59fd5298fb5f3309ecc6eb4d",
+          "name": "category",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "category_name",
+              "index": 1,
+              "dataType": {
+                "name": "VARCHAR",
+                "type": "String",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "Articels",
+              "index": 2,
+              "dataType": {
+                "name": "articel",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": true
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59fd5298fb5f3309ecc6eb52"
+        },
+        {
+          "id": "59fd5298fb5f3309ecc6eb4e",
+          "name": "articel",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "CreadtedDate",
+              "index": 1,
+              "dataType": {
+                "name": "DATE",
+                "type": "Date",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "author",
+              "index": 2,
+              "dataType": {
+                "name": "author",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "categories",
+              "index": 3,
+              "dataType": {
+                "name": "category",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": true
+            },
+            {
+              "name": "comments",
+              "index": 4,
+              "dataType": {
+                "name": "comment",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": true
+            },
+            {
+              "name": "articelType",
+              "index": 5,
+              "dataType": {
+                "name": "ArticelType",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59fd5298fb5f3309ecc6eb52"
+        },
+        {
+          "id": "59fd5298fb5f3309ecc6eb4f",
+          "name": "comment",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "Article",
+              "index": 1,
+              "dataType": {
+                "name": "articel",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59fd5298fb5f3309ecc6eb52"
+        },
+        {
+          "id": "59fd5298fb5f3309ecc6eb50",
+          "name": "author",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "articel",
+              "index": 1,
+              "dataType": {
+                "name": "articel",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59fd5298fb5f3309ecc6eb52"
+        },
+        {
+          "id": "59fd5298fb5f3309ecc6eb51",
+          "name": "ArticelType",
+          "type": "TABLE",
+          "fields": [
+            {
+              "name": "id",
+              "index": 0,
+              "dataType": {
+                "name": "BIGINT",
+                "type": "Number",
+                "isEntity": false
+              },
+              "optional": false,
+              "indexed": false,
+              "identifier": true,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "Typename",
+              "index": 1,
+              "dataType": {
+                "name": "VARCHAR",
+                "type": "String",
+                "isEntity": false
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": false
+            },
+            {
+              "name": "articles",
+              "index": 2,
+              "dataType": {
+                "name": "articel",
+                "type": "Object",
+                "isEntity": true
+              },
+              "optional": true,
+              "indexed": false,
+              "identifier": false,
+              "size": null,
+              "plural": true
+            }
+          ],
+          "persistable": true,
+          "parameterContainer": false,
+          "dataModelId": "59fd5298fb5f3309ecc6eb52"
+        }
+      ],
+      "relationships": [
+        {
+          "name": null,
+          "primaryEntityName": "articel",
+          "foreignEntityName": "category",
+          "primaryToForeignFieldNameMap": {
+            "categories": "Articels"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "author",
+          "foreignEntityName": "articel",
+          "primaryToForeignFieldNameMap": {
+            "articel": "author"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "category",
+          "foreignEntityName": "articel",
+          "primaryToForeignFieldNameMap": {
+            "Articels": "categories"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "comment",
+          "foreignEntityName": "articel",
+          "primaryToForeignFieldNameMap": {
+            "Article": "comments"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "ArticelType",
+          "foreignEntityName": "articel",
+          "primaryToForeignFieldNameMap": {
+            "articles": "articelType"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "articel",
+          "foreignEntityName": "comment",
+          "primaryToForeignFieldNameMap": {
+            "comments": "Article"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "articel",
+          "foreignEntityName": "author",
+          "primaryToForeignFieldNameMap": {
+            "author": "articel"
+          }
+        },
+        {
+          "name": null,
+          "primaryEntityName": "articel",
+          "foreignEntityName": "ArticelType",
+          "primaryToForeignFieldNameMap": {
+            "articelType": "articles"
+          }
+        }
+      ]
+    },
+    "tenantId": "5921bb46e59c4c79c739cebc",
+    "name": "hasinTec2",
+    "jdbcDataSourceInfoId": "59c26212fb5f33180b89cdbb",
+    "physicalDataModelInfo": {
+      "tablesPrefix": "hasinTec2_"
+    },
+    "persistable": true,
+    "importTransactionId": null
   }
 ]

@@ -1,0 +1,48 @@
+{
+  "content": [
+    {
+      "category_name": "eleven",
+      "id": 11
+    },
+    {
+      "category_name": "twelve",
+      "id": 12
+    },
+    {
+      "category_name": "thirtheen",
+      "id": 13
+    },
+    {
+      "category_name": "fortheen",
+      "id": 14
+    },
+    {
+      "category_name": "fiftheen",
+      "id": 15
+    },
+    {
+      "category_name": "sixteen",
+      "id": 16
+    },
+    {
+      "category_name": "seventeen",
+      "id": 17
+    },
+    {
+      "category_name": "eighteen",
+      "id": 18
+    },
+    {
+      "category_name": "nineteen",
+      "id": 19
+    }
+  ],
+  "last": true,
+  "totalElements": 19,
+  "totalPages": 2,
+  "first": false,
+  "sort": null,
+  "numberOfElements": 9,
+  "size": 10,
+  "number": 1
+}
